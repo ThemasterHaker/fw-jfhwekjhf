@@ -1,0 +1,325 @@
+</head>
+<style>
+{
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f1f9f9;
+}
+
+#app-cover
+{
+    display: table;
+    width: 600px;
+    margin: 80px auto;
+    counter-reset: button-counter;
+}
+
+.row
+{
+    display: table-row;
+}
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 0 #e7efef;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #e7efef;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+#follow-me-link0
+{
+    position: fixed;
+    top: 100px;
+    left: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link1
+{
+    position: fixed;
+    top: 200px;
+    left: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link2
+{
+    position: fixed;
+    top: 300px;
+    left: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link3
+{
+    position: fixed;
+    top: 400px;
+    left: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link4
+{
+    position: fixed;
+    top: 500px;
+    left: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link5
+{
+    position: fixed;
+    top: 100px;
+    right: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link6
+{
+    position: fixed;
+    top: 200px;
+    right: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link7
+{
+    position: fixed;
+    top: 300px;
+    right: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link8
+{
+    position: fixed;
+    top: 400px;
+    right: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link9
+{
+    position: fixed;
+    top: 500px;
+    right: 250px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: red; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link10
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: #217dbb; 
+    border-radius: 2px;
+    z-index: 125;
+}
+#follow-me-link11
+{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 7px;
+    background-color: #217dbb; 
+    border-radius: 2px;
+    z-index: 125;
+}
+</style>
+<body>
+<a id="follow-me-link10" target="_blank" href="xtra.html">Back</a>
+<a id="follow-me-link11" target="_blank" href="stat.html">Stats</a>
+<h1 style="text-align: center; position: fixed; top: 20px; left: 280px;">[Main Admin Control Panel]</h1>
+
+<table>
+  <tr>
+    <td><a id="follow-me-link0" target="_blank" href="hacks/JavaHacks/JavaHacks/index.html">Activate JavaHacks</a></td>
+    <td><a id="follow-me-link1" target="_blank" href="hacks/IPADmalware/index.html">Activate IPAD Malaware</a></td>
+    <td><a id="follow-me-link2" target="_blank" href="hacks/EmailHacker/index.html">Activate EmailHacker</a></td>
+    <td><a id="follow-me-link3" target="_blank" href="hacks/JapTech/JapTech/japtechhome.html">Activate JapTech V23</a></td>
+    <td><a id="follow-me-link4" target="_blank" href="hacks/chipi/index.html">Activate CHiP-Infection</a></td>
+  </tr>
+  <tr>
+    <td><a id="follow-me-link5" target="_blank" href="hacks/i/i/i/i/login.html">Activate Instagram Bypasser</a></td>
+    <td><a id="follow-me-link6" target="_blank" href="hacks/eb/index.html">Activate ElectricalBox</a></td>
+    <td><a id="follow-me-link7" target="_blank" href="hacks/of/of/index.html">Activate Offline Terminal</a></td>
+    <td><a id="follow-me-link8" target="_blank" href="hacks/pp/index.html">Activate PassPhrase PHP</a></td>
+    <td><a id="follow-me-link9" target="_blank" href="mai/m/m/index.html">Activate Morgan AI</a></td>
+  </tr>
+</table>
+
+ <script  src="js/index.js"></script>
+
+<script LANGUAGE="Javascript" TYPE="text/javascript">
+
+setInterval(function(){
+	  	datToday = new Date ();
+	  	document.getElementById('dave').innerHTML=datToday.toLocaleString();
+  	//	document.write(datToday.toLocaleString()+'<br>' );
+},500);
+
+
+
+</SCRIPT>
+
+
+<label id="dave" style="position: fixed; top: 75px; left: 415px;">Starting Clock...</label>
+
+</body>
+</html>

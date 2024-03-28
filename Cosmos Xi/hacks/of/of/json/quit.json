@@ -1,0 +1,83 @@
+{
+    "page": "quit",
+    "source": {
+        "location": "home",
+        "result": ""
+    },
+    "templates": [
+
+        {
+            "type": "welcome",
+            "value": "Choose an action"
+        },
+        {
+            "type": "menu",
+            "value": [
+                {
+                    "name": "lock",
+                    "label": "Lock Terminal",
+                    "action": "lockTerminal",
+                    "result": "Locking Terminal..."
+                },
+                {
+                    "name": "logoff",
+                    "label": "Logoff",
+                    "action": "logoff",
+                    "result": "Exiting to desktop..."
+                },
+                {
+                    "name": "reboot",
+                    "label": "Reboot",
+                    "action": "reboot",
+                    "result": "Rebooting..."
+                },
+                {
+                    "name": "shutdown",
+                    "label": "Shutdown",
+                    "action": "shutdown",
+                    "result": "Shutting down..."
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                },
+                {
+                    "name": "item",
+                    "label": "Item"
+                }
+            ]
+        }
+    ]
+}

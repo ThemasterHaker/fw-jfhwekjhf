@@ -1,0 +1,210 @@
+/*
+
+colors:
+- green: #1aff80
+- blue:  #2ecfff
+- amber: #ffb642
+- white: #c0ffff
+
+*/
+
+@font-face {
+    font-family: 'fsex300';
+    src: url('../fonts/fsex300.woff2') format('woff2'), url('../fonts/fsex300.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0020-007F;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'fsex300';
+    font-size: 16px;
+    user-select: none;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: currentColor;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.88) 0%, rgba(0,0,0,.88) 100%);
+}
+
+#wrapper {
+    width: 640px;
+    height: 480px;
+    padding: 84px 120px;
+
+    box-shadow: 0 0 0 1px red inset;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#header {
+    padding-bottom: 12px;
+}
+
+#header .os, #header .copyright, #header .server {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
+#header .server {
+    text-transform: none;
+    font-size: inherit;
+    line-height: inherit;
+    height: 14px;
+    letter-spacing: 1px;
+    word-spacing: 0;
+}
+
+#header .server:before, #header .server:after {
+    content: '-';
+}
+
+.welcome {
+    display: none;             /* display is set by .template-* rule */
+    font-size: inherit;
+    letter-spacing: 1px;
+    line-height: 12px;
+    margin: 0;
+    padding-bottom: 6px;
+    border-bottom-color: currentColor;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.template-welcome .welcome {   /* actual display value is set here */
+    display: inline-block;
+}
+
+.menu {
+    display: none;             /* display is set by .template-* rule */
+    width: 100%;
+    padding: 0;
+    margin: 2px 0;
+    overflow: hidden;
+}
+
+.template-menu .menu {
+    display: block;            /* actual display value is set here */
+}
+
+.menu .item {
+    display: none;        /* hide menu items if they're not .active (different from .selected) */
+    width: auto;
+    height: 22px;        /* prevents applied :focus from squishing the automatic height */
+    line-height: 22px;
+    letter-spacing: 1px;
+    margin: 2px 36px 0px 0;
+}
+
+.menu .item.visible {
+    display: block;        /* actual display value is set here */
+}
+
+.menu .item:before {
+    content: '> ';
+}
+
+.menu .item.selected {
+    background-color: currentColor;
+    position: relative;
+}
+
+.menu .item.selected:before {
+    color: rgba(0,0,0,.88);
+    text-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+.menu .item.selected:after {
+    content: attr(data-label);
+    position: absolute;
+    left: 18px;
+    color: rgba(0,0,0,.88);
+    text-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+.note {
+    display: none;             /* display is set by .template-* rule */
+    padding-top: 8px;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 12px;
+    word-spacing: 0px;
+    white-space: pre-wrap;
+}
+
+.note [data-note-section] {
+    display: none;            /* display is set by .active class */
+}
+
+.note [data-note-section].active {
+    display: inline;         /* visibility of current note section set here */
+}
+
+.template-note .note {
+    display: block;            /* actual display value is set here */
+}
+
+#footer {
+    height: 32px;
+    padding-top: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+
+#footer .result {
+    font-size: inherit;
+}
+
+#footer .block {
+    animation: blink 835ms linear infinite;
+}
+
+#footer .block:before {
+    content: '';
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    background-color: currentColor;
+    line-height: 17px;
+    position: relative;
+    bottom: -1px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

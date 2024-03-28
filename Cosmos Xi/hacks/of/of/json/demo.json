@@ -1,0 +1,31 @@
+{
+    "page": "demo",
+    "source": {
+        "location": "home",
+        "result": ""
+    },
+    "templates": [
+
+        {
+            "type": "welcome",
+            "value": "A set of demo pages that explains the anatomy of Retro Terminal templates"
+        },
+        {
+            "type": "menu",
+            "value": [
+                {
+                    "name": "menu-template",
+                    "label": "Menu Template",
+                    "location": "menu-demo",
+                    "result": ""
+                },
+                {
+                    "name": "note-template",
+                    "label": "Note Template",
+                    "location": "note-demo",
+                    "result": ""
+                }
+            ]
+        }
+    ]
+}

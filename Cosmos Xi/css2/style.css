@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #34495e;
+  height: 100vh;
+}
+
+.button {
+  outline: none;
+  border: none;
+  background: #217dbb;
+  margin-top: 0;
+  width: 100px;
+  height: 110px;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.button:active {
+  margin-top: 10px;
+  height: 100px;
+}
+.button:hover {
+  margin-top: 2.5px;
+  height: 107.5px;
+}
+.button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  width: 70px;
+  border-radius: 100px;
+  background: #3498db;
+  font-size: 60px;
+  color: #ecf0f1;
+  text-align: center;
+}

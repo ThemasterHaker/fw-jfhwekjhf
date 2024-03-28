@@ -1,0 +1,49 @@
+{
+    "page": "reign-of-grelok-menu",
+    "source": {
+        "location": "games",
+        "result": ""
+    },
+    "templates": [
+
+        {
+            "type": "welcome",
+            "value": "Reign of Grelok (beta v.632)"
+        },
+        {
+            "type": "menu",
+            "value": [
+                {
+                    "name": "town-look-around",
+                    "label": "(Town) Look Around",
+                    "action": "",
+                    "result": ""
+                },
+                {
+                    "name": "speak-with-blacksmith",
+                    "label": "Speak with blacksmith",
+                    "action": "",
+                    "result": ""
+                },
+                {
+                    "name": "speak-with-priest",
+                    "label": "Speak with priest",
+                    "action": "",
+                    "result": ""
+                },
+                {
+                    "name": "go-north",
+                    "label": "Go North",
+                    "action": "",
+                    "result": ""
+                },
+                {
+                    "name": "inventory",
+                    "label": "Inventory",
+                    "action": "",
+                    "result": ""
+                }
+            ]
+        }
+    ]
+}

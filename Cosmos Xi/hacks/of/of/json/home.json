@@ -1,0 +1,49 @@
+{
+    "page": "home",
+    "source": {
+        "location": "root",
+        "result": ""
+    },
+    "templates": [
+
+        {
+            "type": "welcome",
+            "value": "Welcome to Retro Terminal! Explore the options below to learn more."
+        },
+        {
+            "type": "menu",
+            "value": [
+                {
+                    "name": "about",
+                    "label": "About Retro Terminal",
+                    "location": "about",
+                    "result": ""
+                },
+                {
+                    "name": "games",
+                    "label": "Games",
+                    "location": "games",
+                    "result": ""
+                },
+                {
+                    "name": "demo",
+                    "label": "Demo",
+                    "location": "demo",
+                    "result": ""
+                },
+                {
+                    "name": "settings",
+                    "label": "Settings",
+                    "location": "settings",
+                    "result": ""
+                },
+                {
+                    "name": "quit",
+                    "label": "Quit",
+                    "location": "quit",
+                    "result": ""
+                }
+            ]
+        }
+    ]
+}

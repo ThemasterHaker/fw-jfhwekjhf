@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Chat</title>
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css'>
+
+      <link rel="stylesheet" href="csschat/style.css">
+
+  
+</head>
+
+<body>
+<a id="follow-me-link6"target="_blank" href="index.html">Exit Chat</a>
+
+  <div class="all_content">
+        <div class="nav">
+            <table class="user">
+                <tr>
+                    <td id="away_message"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/229436/icon_footer_edit_white.png">
+                    </td>
+                    <td id="name"></td>
+                    
+                    <td id="image"></td>  
+                </tr> 
+            </table>
+        </div>
+
+
+        <div class="wrapper_container">
+          
+          <div class="away__contents visible">
+          <a class="away__close" href="#"><i class="material-icons">close</i></a>
+            <div class="away_header">Set your away message</div>
+            <div class="away_subheader"><small>Choose a friendly message to show other users when you go away</small></div> 
+            <textarea id="away_message_input" placeholder="Enter your away message">I am currently away.</textarea>
+            <button class="save_away">Set Away Message</button>
+            <button class="back">I'm Back</button>  
+          </div> 
+          
+          <div class="settings__contents visible">
+    <a class="away_toggle" href="#">
+      <div class="away_label">Auto-Away: <span>ON</span></div>
+         <div class="switch">  
+      <input id="switch-1" type="checkbox" class="switch-input" checked>
+      <label for="switch-1" class="switch-label">Switch</label>
+    </div>
+            </a>      
+    <a class="settings__close" href="#"><i class="material-icons">close</i></a>
+            <div class="settings_fields">
+              <label class="settings_image" for="file-input">
+                <img id="settings_image" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg"> 
+              </label>
+      
+               
+              <div class="set_fields"> 
+            <input type="text" class="settings_input" id="setting_username" placeholder="Username" disabled>
+            <input type="text" class="settings_input" id="setting_firstname" placeholder="First Name">
+            <input type="text" class="settings_input" id="setting_lastname" placeholder="Last Name">
+            <input type="text" class="settings_input" id="setting_location" placeholder="Location">
+              <textarea class="settings_textarea" rows="4" id="setting_description" placeholder="Enter a short description"></textarea> 
+              </div>
+
+              <h5 class="btn_holder"><a><button class="btn-sample" id="settings_btn">Update</button></a></h5>
+        
+            </div>
+          </div>
+           
+          <div class="modal__contents visible">
+    <a class="modal__close" href="#"><i class="material-icons">close</i></a>
+    <a class="user_status_modal" href="#">Status: <span>Online</span></a>
+   
+    <h1 class="modal_image"><img class="profile_image" src="">
+      <div class="semicircle">
+        <small><u>Away Message</u><br><br><span id="awaymessage">I am currently away, this is an example of a long away message. if the away message was this long, this is how much it may overflow from the container.</span>
+        </small>  
+      </div> 
+            </h1> 
+    <h1 class="modal_username"> 
+      <div class="username_text"></div>
+      <div class="location_text"></div>
+      <div class="details_username copy_mention"></div>
+      <div class="modal_description"> 
+      </div>  
+      
+      <!--<div class="social">
+        <table width="100%">
+          <tr>
+            <td id="fb"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/229436/facebook.png"></td>
+            <td id="tw"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/229436/twitter.png"></td>
+            <td id="web"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/229436/instagram_(1).png"></td>
+          </tr>
+        </table>
+      </div>-->
+      
+            </h1>
+
+</div>
+          <ul class="wrapper">
+            </ul>
+
+        </div>
+        <div class="user_list_wrapper">
+            <ul class="user_wrapper hidden">
+                <div class="user_list_header"><i class="close"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/229436/074202-rounded-glossy-black-icon-alphanumeric-x-solid.png"></i>Users <span>(0)</span>
+                </div>
+                <li class="buffer"> </li>
+            </ul>
+        </div>
+
+
+        <ul class="notif_wrapper"></ul>
+        <ul class="mentions_wrapper animated slideInLeft"></ul>
+        <span id="is_typing"></span>
+        <span id="settings"><i class="material-icons">settings</i></span>
+        <input class="message" type="text" placeholder="Enter message and press enter" />
+
+    </div>
+    <div class="avatar_Modal">
+
+        <div class="icon2">
+            <h3><span id="hey_user"></span></h3>
+            <h3>Let's set your avatar!</h3>
+            <h4 id="hint">(Larger images look better!)</h4>
+
+            <label id="avatar_label" for="file-input">
+                <img class="blah" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg"> 
+
+            </label>
+            <h4 id="hint2">Just tap the placeholder and choose your file</h4>
+            <h5><a href="#"><button class="btn-sample" id="nope">No Avatar</button></a></h5>
+        </div> 
+
+
+        <div class="image-upload">
+
+            <input id="file-input" type="file" class="avatar_img" />
+        </div>
+        <input class="avatar_submit" type="submit">
+        <span class="avatar_error">You must upload an avatar</span>
+
+    </div>
+
+    <div class="initModal">
+
+        <div class="icon2">
+            <img src="https://www.ti-media.com/wp-content/uploads/2014/03/chat_logo.png">
+          
+        </div>
+        <h3></h3>
+        <input type="text" class="username" placeholder="Username + Enter" />
+        <span class="error"></span><span class="error2"></span>
+        <div class="mobile_stuff">
+        <h5><a href="#"><button class="btn-sample" id="guest">Continue as Guest<span></span></button></a></h5>
+      <div class="users_online"><span>0</span></div>
+      </div>
+
+      
+    </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+<script src='https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
+
+  
+
+    <script  src="jschat/index.js"></script>
+
+ <script  src="js/index.js"></script>
+
+<script LANGUAGE="Javascript" TYPE="text/javascript">
+
+setInterval(function(){
+	  	datToday = new Date ();
+	  	document.getElementById('dave').innerHTML=datToday.toLocaleString();
+  	//	document.write(datToday.toLocaleString()+'<br>' );
+},500);
+
+
+
+</SCRIPT>
+
+
+<label id="dave" style="position: fixed; top: 60px; left: 900px;">Starting Clock...</label>
+
+
+</body>
+
+</html>

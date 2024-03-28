@@ -1,0 +1,31 @@
+{
+    "page": "menu-demo",
+    "source": {
+        "location": "demo",
+        "result": ""
+    },
+    "templates": [
+
+        {
+            "type": "welcome",
+            "value": "This is welcome text for a menu."
+        },
+        {
+            "type": "menu",
+            "value": [
+                {
+                    "name": "menu-item-button",
+                    "label": "Some items trigger actions",
+                    "action": "setDemoMenuItemButton",
+                    "result": "This result text means the action worked!"
+                },
+                {
+                    "name": "menu-item-link",
+                    "label": "Some items link to locations",
+                    "location": "note-demo",
+                    "result": "This is result text means the link worked!"
+                }
+            ]
+        }
+    ]
+}

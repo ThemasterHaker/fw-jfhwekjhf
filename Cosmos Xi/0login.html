@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CosmosXi Login</title>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Niramit|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=KoHo|Muli|Open+Sans+Condensed:300|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+	</head>
+	<a id="follow-me-link1" target="_blank" href="help2.html">Forgot Login Info</a>
+	<body oncontextmenu="return false">
+	<h1 class="usernamebox" style="text-align: center; font-size: 50px; color: #b707f2;">Cosmos Xi</h1><h1 style="color: #217dbb;">Login</h1>
+		<br>
+		<form name="login">
+			<div class="login">
+				<input class="usernamebox" type="text" placeholder="Username" name="userid"><br><br>
+				<input class="passwordbox" type="password" placeholder="Password" name="pswrd"><br><br>
+				<input class="loginbutton" type="button" onclick="check(this.form)" value="Login"/>
+				<p style="font-size: 15px; color: #fff">If "Login" button is red, then you have entered the wrong creditienals.</p>
+			</div>
+		</form>
+	</body>
+</html>
+<style>
+	html, body {
+		align-items: center;
+		text-align: center;
+		margin: 0;
+		padding: 0;	
+		background-color: #fff;
+		font-family: Koho, sans-serif;
+	}
+
+	body {
+		padding-top: 200px;
+	}
+
+	div.login {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		background-color: #111;
+		jalign-items: center;
+		text-align: center;
+	}
+
+	input.usernamebox {
+		color: #fff;
+		background-color: transparent;
+		height: 25px;
+		width: 350px;
+		border: 1px white solid;
+		font-size: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	input.passwordbox {
+		color: #fff;
+		background-color: transparent;
+		height: 25px;
+		width: 350px;
+		border: 1px white solid;
+		font-size: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	input.loginbutton {
+		color: #111;
+		background-color: #fff;
+		border: 1px white solid;
+		font-size: 15px;
+		height: 35px;
+		width: 125px;
+	}
+
+	input.loginbutton:hover {
+		background-color: red;
+	}
+
+</style>
+<script language="javascript">
+	function check(form)
+	{
+		if(form.userid.value == "Admin" && form.pswrd.value == "Db123magic")
+		{
+			window.open('index.html')
+		}
+		if(form.userid.value == "Client" && form.pswrd.value == "Password123")
+		{
+			window.open('index.html')
+		}
+	}
+</script>
